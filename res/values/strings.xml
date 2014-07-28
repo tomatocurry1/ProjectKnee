@@ -3,6 +3,8 @@
 
     <string name="app_name">ProjectKnee</string>
     <string name="hello_world">Hello world!</string>
+    <string name="edit_message">Enter Message</string>
+    <string name="button_send">Send</string>
     <string name="action_settings">Settings</string>
 
 </resources>
