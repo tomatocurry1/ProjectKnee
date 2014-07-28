@@ -1,12 +1,17 @@
 package com.tomatocurry1.projectknee;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 public class EneKnee extends ActionBarActivity {
 
+	public final static String EXTRA_MESSAGE = "com.tomatocurry1.projectKnee.MESSAGE";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -30,5 +35,12 @@ public class EneKnee extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void sendMessage(View view){
+		Intent intent = new Intent(this, DisplayMessageActivity.class);
+		EditText editText = (EditText) findViewById(R.id.edit_message);
+		String message = editText.getText().toString();
+		intent.putExtra(EXTRA_MESSAGE, message);
 	}
 }
