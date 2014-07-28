@@ -12,7 +12,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_display_message);
+		//setContentView(R.layout.activity_display_message);
 		
 		// Get the message from the intent
 	    Intent intent = getIntent();
